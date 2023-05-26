@@ -8,34 +8,53 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-    
+    // MARK: - IBOutlets
     @IBOutlet var usernameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    @IBOutlet var forgotUserNameBT: UIButton!
-    @IBOutlet var forgotPasswordBT: UIButton!
-
+    private let username = "User"
+    private let password = "Password"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        NotificationCenter.default.addObserver(
-            forName: UIResponder.keyboardWillShowNotification, object: nil, queue: nil)
-        { notification in self.keyboardWillShow(sender: notification) }
-        
-        NotificationCenter.default.addObserver(
-            forName: UIResponder.keyboardWillHideNotification, object: nil, queue: nil)
-        { notification in self.keyboardWillHide(sender: notification) }
-        
-        
+        keyboardAppearSetup()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let loginVC = segue.destination as? WelcomeViewController else { return }
-        loginVC.userNameInfo = usernameTF.text
+        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+        welcomeVC.username = username
     }
-
-    //  MARK: - Keyboard Setup
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+    
+    // MARK: - IBActions
+    @IBAction func logInButtonPressed() {
+        guard usernameTF.text == username, passwordTF.text == password else {
+            showAlert(
+                title: "Invalid login or password",
+                message: "Please, enter correct login and password",
+                textField: passwordTF
+            )
+            return
+        }
+        performSegue(withIdentifier: "showWelcomeVC", sender: nil)
+    }
+    
+    @IBAction func forgotRegisterData(_ sender: UIButton) {
+        sender.tag == 0
+        ? showAlert(title: "Oops!", message: "Your Username is \(username) 😉")
+        : showAlert(title: "Oops!", message: "Your password is \(password) 😉")
+    }
+    
+    @IBAction func unwindSegue(for segue: UIStoryboardSegue) {
+        usernameTF.text = ""
+        passwordTF.text = ""
+    }
+    
+    //  MARK: - Private methods
     private func keyboardWillShow(sender: Notification) {
         view.frame.origin.y = -150
     }
@@ -44,45 +63,26 @@ class LoginViewController: UIViewController {
         view.frame.origin.y = 0
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
+    private func keyboardAppearSetup() -> Void {
+        NotificationCenter.default.addObserver(
+            forName: UIResponder.keyboardWillShowNotification, object: nil, queue: nil)
+        { notification in self.keyboardWillShow(sender: notification) }
         
-        view.endEditing(true)
+        NotificationCenter.default.addObserver(
+            forName: UIResponder.keyboardWillHideNotification, object: nil, queue: nil)
+        { notification in self.keyboardWillHide(sender: notification) }
     }
-
-    
-    // MARK: - IBActions
-    @IBAction func logInButtonDidTapped() {
-        if usernameTF.text == "User" && passwordTF.text == "Password" {
-            return
-        } else {
-           showAlert(withTitle: "Invalid login or password", andMessage: "Please, enter correct login and password")
-        }
-    }
-    
-    @IBAction func unwind(for segue: UIStoryboardSegue) {
-        guard let _ = segue.source as? WelcomeViewController else { return }
-        usernameTF.text = ""
-        passwordTF.text = ""
-    }
-    
-    @IBAction func forgotUserNameButtonDidTapped() {
-        showAlert(withTitle: "Oops!", andMessage: "Your Username is User 😉")
-    }
-    
-    @IBAction func forgotPasswordButtonDidTapped() {
-        showAlert(withTitle: "Oops!", andMessage: "Your password is Password 😉")
-    }
-
 }
 
     // MARK: - UIAlert Controller
 extension LoginViewController {
-    private func showAlert(withTitle title: String, andMessage message: String) {
+    private func showAlert(title: String, message: String, textField: UITextField? = nil ) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        present(alert, animated: true)
-        let okAction = UIAlertAction(title: "OK", style: .default)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            textField?.text = ""
+        }
         alert.addAction(okAction)
+        present(alert, animated: true)
     }
 }
 

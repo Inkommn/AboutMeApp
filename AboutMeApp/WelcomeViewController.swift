@@ -9,25 +9,27 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
 
-    @IBOutlet var userNameInfoOutlet: UILabel!
+    @IBOutlet var welcomeUser: UILabel!
     
-    var userNameInfo: String!
+    var username: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        userNameInfoOutlet.text = userNameInfo
-        
+        welcomeUser.text = username
+        gradientForView()
+    }
+    
+    private func gradientForView() -> Void {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = view.bounds
+        gradientLayer.startPoint = CGPoint(x: 0.5, y: 1)
+        gradientLayer.endPoint = CGPoint(x: 0.5, y: 0)
+        view.layer.insertSublayer(gradientLayer, at: 0)
         gradientLayer.colors = [
             UIColor.systemPink.cgColor,
             UIColor.systemIndigo.cgColor
         ]
-        
-        gradientLayer.startPoint = CGPoint(x: 0.5, y: 1)
-        gradientLayer.endPoint = CGPoint(x: 0.5, y: 0)
-        
-        view.layer.insertSublayer(gradientLayer, at: 0)
     }
 
 }
+
