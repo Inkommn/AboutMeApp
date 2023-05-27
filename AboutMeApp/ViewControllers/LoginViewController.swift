@@ -15,9 +15,15 @@ class LoginViewController: UIViewController {
     private let username = "User"
     private let password = "Password"
     
+    // поменять потом
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         keyboardAppearSetup()
+        
+        usernameTF.text = "User"
+        passwordTF.text = "Password"
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
