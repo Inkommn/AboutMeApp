@@ -8,7 +8,6 @@
 import UIKit
 
 class WelcomeViewController: UIViewController {
-
     @IBOutlet var welcomeUser: UILabel!
     
     var username: String!

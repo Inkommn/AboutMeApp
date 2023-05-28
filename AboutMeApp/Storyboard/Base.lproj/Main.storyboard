@@ -25,17 +25,17 @@
                                             <fontDescription key="titleFontDescription" style="UICTFontTextStyleSubhead"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="forgotRegisterData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rjZ-Wg-jGh"/>
+                                            <action selector="forgotRegisterData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MPf-DO-Ehe"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DnN-Zb-51B">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DnN-Zb-51B">
                                         <rect key="frame" x="154" y="0.0" width="134" height="52"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Forgot Password?">
                                             <fontDescription key="titleFontDescription" style="UICTFontTextStyleSubhead"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="forgotRegisterData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e8F-wi-dgi"/>
+                                            <action selector="forgotRegisterData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xdp-n6-RMK"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -308,10 +308,10 @@
                     <connections>
                         <outlet property="age" destination="54q-eE-0jr" id="hOi-3G-SEY"/>
                         <outlet property="country" destination="l2h-wg-02h" id="FEQ-TT-3bU"/>
-                        <outlet property="imageAboutMe" destination="PxW-nI-w5T" id="cfC-2Q-mRF"/>
                         <outlet property="name" destination="cgs-TE-CNo" id="YO1-TV-zTh"/>
                         <outlet property="occupation" destination="Yq9-yA-5gg" id="ln2-tf-HHv"/>
                         <outlet property="surname" destination="Ree-k5-fwe" id="zvV-3i-0Hy"/>
+                        <outlet property="userImage" destination="PxW-nI-w5T" id="cfC-2Q-mRF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Olk-Ez-dLR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -325,15 +325,27 @@
                     <view key="view" contentMode="scaleToFill" id="rSr-tg-2vc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJY-S2-TfP">
+                                <rect key="frame" x="16" y="92" width="194" height="160"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="eZh-yi-p3Y"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="d6T-WZ-H4C"/>
                     <navigationItem key="navigationItem" id="7E0-Rq-nDe"/>
+                    <connections>
+                        <outlet property="userBioLabel" destination="yJY-S2-TfP" id="kUd-yy-38o"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z27-Jg-BZj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3229" y="773"/>
+            <point key="canvasLocation" x="3228.75" y="772.18309859154931"/>
         </scene>
         <!--User-->
         <scene sceneID="sY6-WA-XNj">
