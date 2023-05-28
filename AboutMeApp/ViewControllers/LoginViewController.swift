@@ -8,6 +8,7 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    
     // MARK: - IBOutlets
     @IBOutlet var usernameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
@@ -15,12 +16,13 @@ class LoginViewController: UIViewController {
     private let username = "User"
     private let password = "Password"
     
-    // поменять потом
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         keyboardAppearSetup()
         
+        // поменять потом log pass
         usernameTF.text = "User"
         passwordTF.text = "Password"
         

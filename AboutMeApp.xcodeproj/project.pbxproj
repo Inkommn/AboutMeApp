@@ -17,6 +17,7 @@
 		1D77E0182A1B5CD500844E95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D77E0172A1B5CD500844E95 /* Assets.xcassets */; };
 		1D77E01B2A1B5CD500844E95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D77E0192A1B5CD500844E95 /* LaunchScreen.storyboard */; };
 		1D77E0252A1B78C200844E95 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D77E0242A1B78C200844E95 /* WelcomeViewController.swift */; };
+		1D8232502A23657D00AA4C95 /* ImageForAboutMeApp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1D82324F2A23657D00AA4C95 /* ImageForAboutMeApp.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		1D77E01A2A1B5CD500844E95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D77E01C2A1B5CD500844E95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D77E0242A1B78C200844E95 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		1D82324F2A23657D00AA4C95 /* ImageForAboutMeApp.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = ImageForAboutMeApp.jpg; path = ../../../ImageForAboutMeApp.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				1D72E0362A220E2B00C04FE1 /* Storyboard */,
 				1D72E0372A220E4600C04FE1 /* App */,
 				1D77E0172A1B5CD500844E95 /* Assets.xcassets */,
+				1D82324F2A23657D00AA4C95 /* ImageForAboutMeApp.jpg */,
 			);
 			path = AboutMeApp;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D77E01B2A1B5CD500844E95 /* LaunchScreen.storyboard in Resources */,
+				1D8232502A23657D00AA4C95 /* ImageForAboutMeApp.jpg in Resources */,
 				1D77E0182A1B5CD500844E95 /* Assets.xcassets in Resources */,
 				1D77E0162A1B5CD400844E95 /* Main.storyboard in Resources */,
 			);

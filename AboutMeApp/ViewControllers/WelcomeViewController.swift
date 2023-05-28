@@ -19,16 +19,17 @@ class WelcomeViewController: UIViewController {
         gradientForView()
     }
     
+    // MARK: - Private Methods
     private func gradientForView() -> Void {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = view.bounds
         gradientLayer.startPoint = CGPoint(x: 0.5, y: 1)
         gradientLayer.endPoint = CGPoint(x: 0.5, y: 0)
-        view.layer.insertSublayer(gradientLayer, at: 0)
         gradientLayer.colors = [
             UIColor.systemPink.cgColor,
             UIColor.systemIndigo.cgColor
         ]
+        view.layer.insertSublayer(gradientLayer, at: 0)
     }
 
 }
