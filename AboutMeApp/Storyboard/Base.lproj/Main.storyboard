@@ -164,10 +164,10 @@
             </objects>
             <point key="canvasLocation" x="831" y="775"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="U9R-14-ylQ">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="E97-lh-fPQ" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="E97-lh-fPQ" customClass="TabBarViewController" customModule="AboutMeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TTL-cd-VD7">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -318,40 +318,45 @@
             </objects>
             <point key="canvasLocation" x="2482.5" y="773.23943661971828"/>
         </scene>
-        <!--Item-->
+        <!--Bio-->
         <scene sceneID="oT3-kx-GQ4">
             <objects>
                 <viewController id="xnj-Rs-ihn" customClass="UserBioViewController" customModule="AboutMeApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="rSr-tg-2vc">
+                    <view key="view" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rSr-tg-2vc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJY-S2-TfP">
-                                <rect key="frame" x="16" y="92" width="194" height="160"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJY-S2-TfP">
+                                <rect key="frame" x="16" y="92.5" width="288" height="426.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eZh-yi-p3Y"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yJY-S2-TfP" firstAttribute="top" secondItem="eZh-yi-p3Y" secondAttribute="top" id="0Mg-jj-DEe"/>
+                            <constraint firstItem="eZh-yi-p3Y" firstAttribute="trailing" secondItem="yJY-S2-TfP" secondAttribute="trailing" constant="16" id="MLO-jd-W0b"/>
+                            <constraint firstItem="yJY-S2-TfP" firstAttribute="leading" secondItem="eZh-yi-p3Y" secondAttribute="leading" constant="16" id="QPP-on-oFP"/>
+                            <constraint firstItem="yJY-S2-TfP" firstAttribute="bottom" secondItem="eZh-yi-p3Y" secondAttribute="bottom" id="d7I-26-kF2"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="d6T-WZ-H4C"/>
-                    <navigationItem key="navigationItem" id="7E0-Rq-nDe"/>
+                    <navigationItem key="navigationItem" title="Bio" id="7E0-Rq-nDe"/>
                     <connections>
                         <outlet property="userBioLabel" destination="yJY-S2-TfP" id="kUd-yy-38o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z27-Jg-BZj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3228.75" y="772.18309859154931"/>
+            <point key="canvasLocation" x="3227.4418604651164" y="771.88841201716741"/>
         </scene>
         <!--User-->
         <scene sceneID="sY6-WA-XNj">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="s0g-gA-Phe" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="User" image="person.fill" catalog="system" id="eSo-Zq-R85"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="User" image="person.fill" catalog="system" id="eSo-Zq-R85"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="LgM-nh-qbq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="92.5"/>

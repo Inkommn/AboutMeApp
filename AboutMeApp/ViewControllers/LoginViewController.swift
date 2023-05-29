@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+final class LoginViewController: UIViewController {
     private let userLoginData = User.getInformationAboutUser()
     
     // MARK: - IBOutlets
@@ -69,7 +69,7 @@ class LoginViewController: UIViewController {
         view.frame.origin.y = 0
     }
     
-    private func keyboardAppearSetup() -> Void {
+    private func keyboardAppearSetup() {
         NotificationCenter.default.addObserver(
             forName: UIResponder.keyboardWillShowNotification, object: nil, queue: nil)
         { notification in self.keyboardWillShow(sender: notification) }

@@ -19,7 +19,7 @@ class WelcomeViewController: UIViewController {
     }
     
     // MARK: - Private Methods
-    private func gradientForView() -> Void {
+    private func gradientForView() {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = view.bounds
         gradientLayer.startPoint = CGPoint(x: 0.5, y: 1)
