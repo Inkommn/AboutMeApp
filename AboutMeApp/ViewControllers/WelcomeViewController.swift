@@ -7,14 +7,18 @@
 
 import UIKit
 
-class WelcomeViewController: UIViewController {
+final class WelcomeViewController: UIViewController {
+    
+    // MARK: - IBOutlets
     @IBOutlet var welcomeUser: UILabel!
     
-    var username: String!
+    // MARK: - Private properties
+    private let userInfo = User.getInformationAboutUser()
     
+    // MARK: - UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
-        welcomeUser.text = username
+        welcomeUser.text = userInfo.person.name
         gradientForView()
     }
     

@@ -8,25 +8,23 @@
 import UIKit
 
 final class LoginViewController: UIViewController {
-    private let userLoginData = User.getInformationAboutUser()
     
     // MARK: - IBOutlets
     @IBOutlet var usernameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
+    // MARK: - Private properties
+    private let userLoginData = User.getInformationAboutUser()
+    
+    // MARK: - UiViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         keyboardAppearSetup()
         
-        // поменять потом log pass
+        // удалить потом log pass
         usernameTF.text = "User"
         passwordTF.text = "Password"
         
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.username = userLoginData.login
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
