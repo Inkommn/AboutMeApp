@@ -29,8 +29,8 @@ final class WelcomeViewController: UIViewController {
         gradientLayer.startPoint = CGPoint(x: 0.5, y: 1)
         gradientLayer.endPoint = CGPoint(x: 0.5, y: 0)
         gradientLayer.colors = [
-            UIColor.systemPink.cgColor,
-            UIColor.systemIndigo.cgColor
+            UIColor.systemTeal.cgColor,
+            UIColor.systemPink.cgColor
         ]
         view.layer.insertSublayer(gradientLayer, at: 0)
     }

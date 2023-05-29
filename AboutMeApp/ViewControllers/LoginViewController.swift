@@ -20,6 +20,7 @@ final class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         keyboardAppearSetup()
+        gradientForView()
         
         // удалить потом log pass
         usernameTF.text = "User"
@@ -75,6 +76,18 @@ final class LoginViewController: UIViewController {
         NotificationCenter.default.addObserver(
             forName: UIResponder.keyboardWillHideNotification, object: nil, queue: nil)
         { notification in self.keyboardWillHide(sender: notification) }
+    }
+    
+    private func gradientForView() {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = view.bounds
+        gradientLayer.startPoint = CGPoint(x: 0.5, y: 1)
+        gradientLayer.endPoint = CGPoint(x: 0.5, y: 0)
+        gradientLayer.colors = [
+            UIColor.systemTeal.cgColor,
+            UIColor.systemPink.cgColor
+        ]
+        view.layer.insertSublayer(gradientLayer, at: 0)
     }
 }
 
