@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D1CB3C52A26117F001ECE92 /* UserResumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1CB3C32A26117E001ECE92 /* UserResumeViewController.swift */; };
+		1D1CB3C62A26117F001ECE92 /* UserBioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1CB3C42A26117F001ECE92 /* UserBioViewController.swift */; };
+		1D1CB3C82A2611CD001ECE92 /* AboutMeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1CB3C72A2611CD001ECE92 /* AboutMeInfo.swift */; };
 		1D2F8E9B2A249F2E00BFADC6 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2F8E9A2A249F2E00BFADC6 /* TabBarViewController.swift */; };
-		1D72E03A2A220EFB00C04FE1 /* AboutMeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D72E0392A220EFB00C04FE1 /* AboutMeInfo.swift */; };
-		1D72E03C2A2219F400C04FE1 /* UserResumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D72E03B2A2219F400C04FE1 /* UserResumeViewController.swift */; };
-		1D72E03E2A221A0900C04FE1 /* UserBioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D72E03D2A221A0900C04FE1 /* UserBioViewController.swift */; };
 		1D77E00F2A1B5CD400844E95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D77E00E2A1B5CD400844E95 /* AppDelegate.swift */; };
 		1D77E0112A1B5CD400844E95 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D77E0102A1B5CD400844E95 /* SceneDelegate.swift */; };
 		1D77E0132A1B5CD400844E95 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D77E0122A1B5CD400844E95 /* LoginViewController.swift */; };
@@ -21,10 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D1CB3C32A26117E001ECE92 /* UserResumeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserResumeViewController.swift; sourceTree = "<group>"; };
+		1D1CB3C42A26117F001ECE92 /* UserBioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserBioViewController.swift; sourceTree = "<group>"; };
+		1D1CB3C72A2611CD001ECE92 /* AboutMeInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutMeInfo.swift; sourceTree = "<group>"; };
 		1D2F8E9A2A249F2E00BFADC6 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
-		1D72E0392A220EFB00C04FE1 /* AboutMeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AboutMeInfo.swift; path = ../../../PersonalQuiz/PersonalQuiz/Models/AboutMeInfo.swift; sourceTree = "<group>"; };
-		1D72E03B2A2219F400C04FE1 /* UserResumeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserResumeViewController.swift; path = ../../../PersonalQuiz/PersonalQuiz/Models/UserResumeViewController.swift; sourceTree = "<group>"; };
-		1D72E03D2A221A0900C04FE1 /* UserBioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserBioViewController.swift; path = ../../../PersonalQuiz/PersonalQuiz/Models/UserBioViewController.swift; sourceTree = "<group>"; };
 		1D77E00B2A1B5CD400844E95 /* AboutMeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AboutMeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D77E00E2A1B5CD400844E95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D77E0102A1B5CD400844E95 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,9 +52,9 @@
 			children = (
 				1D2F8E9A2A249F2E00BFADC6 /* TabBarViewController.swift */,
 				1D77E0122A1B5CD400844E95 /* LoginViewController.swift */,
+				1D1CB3C42A26117F001ECE92 /* UserBioViewController.swift */,
+				1D1CB3C32A26117E001ECE92 /* UserResumeViewController.swift */,
 				1D77E0242A1B78C200844E95 /* WelcomeViewController.swift */,
-				1D72E03B2A2219F400C04FE1 /* UserResumeViewController.swift */,
-				1D72E03D2A221A0900C04FE1 /* UserBioViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -78,12 +78,12 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		1D72E0382A220ECE00C04FE1 /* Model */ = {
+		1D72E0382A220ECE00C04FE1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1D72E0392A220EFB00C04FE1 /* AboutMeInfo.swift */,
+				1D1CB3C72A2611CD001ECE92 /* AboutMeInfo.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		1D77E0022A1B5CD400844E95 = {
@@ -105,10 +105,10 @@
 		1D77E00D2A1B5CD400844E95 /* AboutMeApp */ = {
 			isa = PBXGroup;
 			children = (
-				1D72E0382A220ECE00C04FE1 /* Model */,
+				1D72E0372A220E4600C04FE1 /* App */,
+				1D72E0382A220ECE00C04FE1 /* Models */,
 				1D72E0352A220E1B00C04FE1 /* ViewControllers */,
 				1D72E0362A220E2B00C04FE1 /* Storyboard */,
-				1D72E0372A220E4600C04FE1 /* App */,
 				1D77E0172A1B5CD500844E95 /* Assets.xcassets */,
 			);
 			path = AboutMeApp;
@@ -186,12 +186,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D2F8E9B2A249F2E00BFADC6 /* TabBarViewController.swift in Sources */,
-				1D72E03A2A220EFB00C04FE1 /* AboutMeInfo.swift in Sources */,
 				1D77E0252A1B78C200844E95 /* WelcomeViewController.swift in Sources */,
+				1D1CB3C52A26117F001ECE92 /* UserResumeViewController.swift in Sources */,
 				1D77E0132A1B5CD400844E95 /* LoginViewController.swift in Sources */,
 				1D77E00F2A1B5CD400844E95 /* AppDelegate.swift in Sources */,
-				1D72E03C2A2219F400C04FE1 /* UserResumeViewController.swift in Sources */,
-				1D72E03E2A221A0900C04FE1 /* UserBioViewController.swift in Sources */,
+				1D1CB3C82A2611CD001ECE92 /* AboutMeInfo.swift in Sources */,
+				1D1CB3C62A26117F001ECE92 /* UserBioViewController.swift in Sources */,
 				1D77E0112A1B5CD400844E95 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
