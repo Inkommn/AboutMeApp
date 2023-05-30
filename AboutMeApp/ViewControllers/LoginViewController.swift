@@ -20,11 +20,6 @@ final class LoginViewController: UIViewController {
         super.viewDidLoad()
         keyboardAppearSetup()
         gradientForView()
-        
-        // удалить потом log pass
-        usernameTF.text = "User"
-        passwordTF.text = "Password"
-        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
