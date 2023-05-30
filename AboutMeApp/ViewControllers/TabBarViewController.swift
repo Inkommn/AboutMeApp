@@ -28,6 +28,5 @@ final class TabBarViewController: UITabBarController {
         tabBar.scrollEdgeAppearance = tabBarAppearnce
         
         tabBarButtons.items?[1].title = userInfo.person.name
-        tabBarButtons.items?[1].title = userInfo.person.surname
     }
 }
