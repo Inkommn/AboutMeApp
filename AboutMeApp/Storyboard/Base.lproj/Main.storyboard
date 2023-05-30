@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -198,7 +199,6 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <outlet property="tabBarButtons" destination="TTL-cd-VD7" id="zR4-G7-Mqa"/>
                         <segue destination="6Wq-0Y-aQk" kind="relationship" relationship="viewControllers" id="N1K-fm-hv9"/>
                         <segue destination="s0g-gA-Phe" kind="relationship" relationship="viewControllers" id="GuS-Qb-vGI"/>
                     </connections>
@@ -207,7 +207,7 @@
             </objects>
             <point key="canvasLocation" x="703" y="-27"/>
         </scene>
-        <!--Sham Mutuskhanov-->
+        <!--Shamkhan Mutuskhanov-->
         <scene sceneID="Mju-eY-RjO">
             <objects>
                 <viewController id="fxh-pZ-ghB" customClass="UserResumeViewController" customModule="AboutMeApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -216,7 +216,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="LOc-d4-vjo">
-                                <rect key="frame" x="16" y="234" width="229" height="180"/>
+                                <rect key="frame" x="16" y="234" width="288" height="180"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gRM-Ps-Q6v">
                                         <rect key="frame" x="0.0" y="0.0" width="102" height="24"/>
@@ -317,13 +317,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="PxW-nI-w5T" firstAttribute="width" secondItem="dTg-fT-4se" secondAttribute="height" multiplier="25:142" id="Fka-u0-TlW"/>
+                            <constraint firstItem="HdC-69-O0g" firstAttribute="trailing" secondItem="LOc-d4-vjo" secondAttribute="trailing" constant="16" id="PJe-CC-uZ5"/>
                             <constraint firstItem="LOc-d4-vjo" firstAttribute="centerY" secondItem="dTg-fT-4se" secondAttribute="centerY" constant="40" id="Wp3-l8-tUE"/>
                             <constraint firstItem="PxW-nI-w5T" firstAttribute="centerX" secondItem="dTg-fT-4se" secondAttribute="centerX" id="it6-G1-Iqo"/>
                             <constraint firstItem="LOc-d4-vjo" firstAttribute="leading" secondItem="HdC-69-O0g" secondAttribute="leading" constant="16" id="q72-m5-qUp"/>
                             <constraint firstItem="PxW-nI-w5T" firstAttribute="top" secondItem="HdC-69-O0g" secondAttribute="top" constant="18.5" id="y4w-Dv-Cvt"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Sham Mutuskhanov" id="LGr-7j-dNQ">
+                    <navigationItem key="navigationItem" title="Shamkhan Mutuskhanov" id="LGr-7j-dNQ">
                         <barButtonItem key="rightBarButtonItem" title="Bio" id="vxX-bQ-Lps">
                             <connections>
                                 <segue destination="xnj-Rs-ihn" kind="show" id="glO-r7-eU7"/>
@@ -336,7 +337,6 @@
                         <outlet property="name" destination="cgs-TE-CNo" id="YO1-TV-zTh"/>
                         <outlet property="occupation" destination="Yq9-yA-5gg" id="ln2-tf-HHv"/>
                         <outlet property="surname" destination="Ree-k5-fwe" id="zvV-3i-0Hy"/>
-                        <outlet property="userImage" destination="PxW-nI-w5T" id="cfC-2Q-mRF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Olk-Ez-dLR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

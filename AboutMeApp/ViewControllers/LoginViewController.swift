@@ -8,13 +8,12 @@
 import UIKit
 
 final class LoginViewController: UIViewController {
-    
     // MARK: - IBOutlets
     @IBOutlet var usernameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
     // MARK: - Private properties
-    private let userLoginData = User.getInformationAboutUser()
+    private let userInfo = User.getInformationAboutUser()
     
     // MARK: - UiViewController
     override func viewDidLoad() {
@@ -35,8 +34,8 @@ final class LoginViewController: UIViewController {
     
     // MARK: - IBActions
     @IBAction func logInButtonPressed() {
-        guard usernameTF.text == userLoginData.login,
-              passwordTF.text == userLoginData.password
+        guard usernameTF.text == userInfo.login,
+              passwordTF.text == userInfo.password
         else {
             showAlert(
                 title: "Invalid login or password",
@@ -50,8 +49,8 @@ final class LoginViewController: UIViewController {
     
     @IBAction func forgotRegisterData(_ sender: UIButton) {
         sender.tag == 0
-        ? showAlert(title: "Oops!", message: "Your Username is \(userLoginData.login) 😉")
-        : showAlert(title: "Oops!", message: "Your Password is \(userLoginData.password) 😉")
+        ? showAlert(title: "Oops!", message: "Your Username is \(userInfo.login) 😉")
+        : showAlert(title: "Oops!", message: "Your Password is \(userInfo.password) 😉")
     }
     
     @IBAction func unwindSegue(for segue: UIStoryboardSegue) {

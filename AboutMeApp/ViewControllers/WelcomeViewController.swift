@@ -8,7 +8,6 @@
 import UIKit
 
 final class WelcomeViewController: UIViewController {
-    
     // MARK: - IBOutlets
     @IBOutlet var welcomeUser: UILabel!
     

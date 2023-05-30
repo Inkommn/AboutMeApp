@@ -8,13 +8,16 @@
 import UIKit
 
 final class TabBarViewController: UITabBarController {
-    // MARK: - @IBOutlets
-    @IBOutlet var tabBarButtons: UITabBar!
-    
     // MARK: - UiViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         setupForTabBarController()
+    }
+    
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        if item.tag == 1 {
+            item.title = userInfo.person.name
+        }
     }
     
     // MARK: - Private properties
@@ -26,7 +29,5 @@ final class TabBarViewController: UITabBarController {
         tabBarAppearnce.configureWithOpaqueBackground()
         tabBar.standardAppearance = tabBarAppearnce
         tabBar.scrollEdgeAppearance = tabBarAppearnce
-        
-        tabBarButtons.items?[1].title = userInfo.person.name
     }
 }
