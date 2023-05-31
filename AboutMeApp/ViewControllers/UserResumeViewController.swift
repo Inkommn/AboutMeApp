@@ -22,8 +22,8 @@ final class UserResumeViewController: UIViewController {
     // MARK: - UiViewController
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupGradientForView()
         getUserResumeInfo()
+        view.gradientForView()
     }
     
     // MARK: - Private Methods
@@ -33,17 +33,5 @@ final class UserResumeViewController: UIViewController {
         age.text = userInfo.person.age
         country.text = userInfo.person.country
         occupation.text = userInfo.person.occupation
-    }
-    
-    private func setupGradientForView() {
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.frame = view.bounds
-        gradientLayer.startPoint = CGPoint(x: 0.5, y: 1)
-        gradientLayer.endPoint = CGPoint(x: 0.5, y: 0)
-        view.layer.insertSublayer(gradientLayer, at: 0)
-        gradientLayer.colors = [
-            UIColor.systemTeal.cgColor,
-            UIColor.systemPink.cgColor
-        ]
     }
 }

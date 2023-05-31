@@ -17,25 +17,12 @@ final class UserBioViewController: UIViewController {
     // MARK: - UiViewController
     override func viewDidLoad() {
         super.viewDidLoad()
-        gradientForBackgroud()
         getUserBio()
-        
+        view.gradientForView()
     }
     
     // MARK: - Private Methods
     private func getUserBio() {
         userBioLabel.text = userInfo.person.bio
-    }
-    
-    private func gradientForBackgroud() {
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.frame = view.bounds
-        gradientLayer.startPoint = CGPoint(x: 0.5, y: 1)
-        gradientLayer.endPoint = CGPoint(x: 0.5, y: 0)
-        view.layer.insertSublayer(gradientLayer, at: 0)
-        gradientLayer.colors = [
-            UIColor.systemTeal.cgColor,
-            UIColor.systemPink.cgColor
-        ]
     }
 }

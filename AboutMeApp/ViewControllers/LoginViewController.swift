@@ -19,7 +19,11 @@ final class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         keyboardAppearSetup()
-        gradientForView()
+        view.gradientForView()
+        
+        usernameTF.text = "User"
+        passwordTF.text = "Password"
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -72,19 +76,8 @@ final class LoginViewController: UIViewController {
         { notification in self.keyboardWillHide(sender: notification) }
     }
     
-    private func gradientForView() {
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.frame = view.bounds
-        gradientLayer.startPoint = CGPoint(x: 0.5, y: 1)
-        gradientLayer.endPoint = CGPoint(x: 0.5, y: 0)
-        gradientLayer.colors = [
-            UIColor.systemTeal.cgColor,
-            UIColor.systemPink.cgColor
-        ]
-        view.layer.insertSublayer(gradientLayer, at: 0)
-    }
+   
 }
-
     // MARK: - UIAlert Controller
 extension LoginViewController {
     private func showAlert(title: String, message: String, textField: UITextField? = nil ) {
@@ -94,6 +87,21 @@ extension LoginViewController {
         }
         alert.addAction(okAction)
         present(alert, animated: true)
+    }
+}
+
+    // MARK: - Background For View
+extension UIView {
+    func gradientForView() {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = bounds
+        gradientLayer.startPoint = CGPoint(x: 0.5, y: 1)
+        gradientLayer.endPoint = CGPoint(x: 0.5, y: 0)
+        gradientLayer.colors = [
+            UIColor.systemTeal.cgColor,
+            UIColor.systemPink.cgColor
+        ]
+        layer.insertSublayer(gradientLayer, at: 0)
     }
 }
 

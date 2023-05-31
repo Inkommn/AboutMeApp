@@ -8,6 +8,9 @@
 import UIKit
 
 final class TabBarViewController: UITabBarController {
+    // MARK: - Private properties
+    private let userInfo = User.getInformationAboutUser()
+    
     // MARK: - UiViewController
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,13 +19,10 @@ final class TabBarViewController: UITabBarController {
     
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         if item.tag == 1 {
-            item.title = userInfo.person.name
+            item.title = userInfo.person.fullName
         }
     }
-    
-    // MARK: - Private properties
-    private let userInfo = User.getInformationAboutUser()
-    
+
     // MARK: - Private methods
     private func setupForTabBarController() {
         let tabBarAppearnce = UITabBarAppearance()
