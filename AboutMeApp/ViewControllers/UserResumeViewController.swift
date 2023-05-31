@@ -15,23 +15,30 @@ final class UserResumeViewController: UIViewController {
     
     @IBOutlet var country: UILabel!
     @IBOutlet var occupation: UILabel!
-
-    // MARK: - Private properties
-    private let userInfo = User.getInformationAboutUser()
     
+    // MARK: - Public Properties
+    var user: User!
+
     // MARK: - UiViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         getUserResumeInfo()
         view.gradientForView()
+        title = user.person.fullName
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let userBioVC = segue.destination as? UserBioViewController else { return }
+        userBioVC.user = user
     }
     
     // MARK: - Private Methods
     private func getUserResumeInfo() {
-        name.text = userInfo.person.name
-        surname.text = userInfo.person.surname
-        age.text = userInfo.person.age
-        country.text = userInfo.person.country
-        occupation.text = userInfo.person.occupation
+        name.text = user.person.name
+        surname.text = user.person.surname
+        age.text = user.person.age
+        
+        country.text = user.person.country
+        occupation.text = user.person.occupation
     }
 }

@@ -31,6 +31,21 @@ final class LoginViewController: UIViewController {
         view.endEditing(true)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let tabBarController = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabBarController.viewControllers else { return }
+        
+        viewControllers.forEach {
+            if let welcomeVC = $0 as? WelcomeViewController {
+                welcomeVC.user = userInfo
+            } else if let navigatorVC = $0 as? UINavigationController {
+                let userResumeVC = navigatorVC.topViewController
+                guard let userResumeVC = userResumeVC as? UserResumeViewController else { return }
+                userResumeVC.user = userInfo
+            }
+        }
+    }
+    
     // MARK: - IBActions
     @IBAction func logInButtonPressed() {
         guard usernameTF.text == userInfo.login,
@@ -76,10 +91,6 @@ final class LoginViewController: UIViewController {
         { notification in self.keyboardWillHide(sender: notification) }
     }
     
-   
-}
-    // MARK: - UIAlert Controller
-extension LoginViewController {
     private func showAlert(title: String, message: String, textField: UITextField? = nil ) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in

@@ -9,15 +9,15 @@ import UIKit
 
 final class WelcomeViewController: UIViewController {
     // MARK: - IBOutlets
-    @IBOutlet var welcomeUser: UILabel!
+    @IBOutlet var welcomeUserLabel: UILabel!
     
-    // MARK: - Private properties
-    private let userInfo = User.getInformationAboutUser()
+    // MARK: - Public Properties
+    var user: User!
     
     // MARK: - UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
-        welcomeUser.text = userInfo.person.name
+        welcomeUserLabel.text = user.person.name
         view.gradientForView()
     }
 }

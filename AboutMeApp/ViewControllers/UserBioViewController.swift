@@ -11,18 +11,19 @@ final class UserBioViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet var userBioLabel: UILabel!
     
-    // MARK: - Private properties
-    private let userInfo = User.getInformationAboutUser()
+    // MARK: - Public properties
+    var user: User!
     
     // MARK: - UiViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         getUserBio()
         view.gradientForView()
+        title = "\(user.person.fullName) Bio"
     }
     
     // MARK: - Private Methods
     private func getUserBio() {
-        userBioLabel.text = userInfo.person.bio
+        userBioLabel.text = user.person.bio
     }
 }
